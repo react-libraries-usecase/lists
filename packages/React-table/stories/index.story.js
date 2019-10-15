@@ -43,6 +43,24 @@ storiesOf('React-table', module)
       </Suspense>
     );
   })
+  .add('Virtual-row', () => {
+    const BasicForm = lazy(() => import('../src/Virtual-row/index'));
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <BasicForm />
+      </Suspense>
+    );
+  })
+
+  .add('Animated', () => {
+    const BasicForm = lazy(() => import('../src/Animated/index'));
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <BasicForm />
+      </Suspense>
+    );
+  })
+
   .add('Complex', () => {
     const BasicForm = lazy(() => import('../src/Complex/index'));
     return (
